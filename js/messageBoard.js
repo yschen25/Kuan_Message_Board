@@ -32,56 +32,55 @@ $(function(){
 
 		if(message.replace(/\s+/g,"").toLowerCase() == 'kuan==god'){
 	     	kuan();
-			$('#container').append('<audio src="../Kuan_MessageBoard/music/NyanCat.mp3"></audio>');
+			$('#container').append('<audio src="./music/NyanCat.mp3"></audio>');
 	     	$('audio')[0].play();
 			return;
 		}
 
-		// // $.ajax({
-		// // 	'type' : 'POST',
-		// // 	'url'  : '',
-		// // 	'data' : message,
-		// // 	beforeSend:function(){
-		// // 		console.log('loading');
-		// // 	},
-		// // 	sucess:function(data){
-		// // 		if(data.status){
-		// // 			alert('sucess');
-		//             $('.alert').show();
-		//             $('.alert p').text('sucess');
-		// // 		}else{
-		// // 			alert(data);
-		// 			   $('.alert').show();
-		//             $('.alert p').text('Send message fail, plz contact aurthor');
-		// // 		}
-		// // 	}
-		// // })
+		$.ajax({
+			'type' : 'POST',
+			'url'  : 'wbms/sendMessage.php',
+			'data' : { 'message' : message },
+			beforeSend:function(){
+				console.log('loading');
+			},
+			sucess:function(data){
+				console.log(data);
+				if(data.status){
+		            $('.alert').show();
+		            $('.alert p').text('sucess');
+				}else{
+					$('.alert').show();
+		            $('.alert p').text('Send message fail, plz contact aurthor');
+				}
+			}
+		})
 	}
 
 	function kuan(){
 		
-		setInterval(function(){
+			setInterval(function(){
 				let top = Math.floor((Math.random() * 10) + 1);
 				let left = Math.floor((Math.random() * 200) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../Kuan_MessageBoard/images/kuan_nyan_cat.gif">');
+				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
 			}, 100)
 
 			setInterval(function(){
 				let top = Math.floor((Math.random() * 500) + 1);
 				let left = Math.floor((Math.random() * 1000) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../Kuan_MessageBoard/images/kuan_nyan_cat.gif">');
+				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
 			}, 200)
 
 			setInterval(function(){
 				let top = Math.floor((Math.random() * 1500) + 1);
 				let left = Math.floor((Math.random() * 8000) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../Kuan_MessageBoard/images/kuan_nyan_cat.gif">');
+				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
 			}, 300)
 
 			setInterval(function(){
 				let top = Math.floor((Math.random() * 2000) + 1);
 				let left = Math.floor((Math.random() * 500) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../Kuan_MessageBoard/images/kuan_nyan_cat.gif">');
+				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
 			}, 500)
 
 	}
@@ -130,45 +129,45 @@ $(function(){
 			$('.text, .aurthor, .statement').addClass('universeTextStyle');
 
 			var materials = [
-				loadTexture( '../Kuan_MessageBoard/images/space14.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space12.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space11.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space16.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space13.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space15.jpg' )
+				loadTexture( './images/space14.jpg' ),
+				loadTexture( './images/space12.jpg' ),
+				loadTexture( './images/space11.jpg' ),
+				loadTexture( './images/space16.jpg' ),
+				loadTexture( './images/space13.jpg' ),
+				loadTexture( './images/space15.jpg' )
 			]
 
 		}else if(x == 2){
 
 			var materials = [
-				loadTexture( '../Kuan_MessageBoard/images/space24.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space22.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space21.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space26.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space23.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space25.jpg' )
+				loadTexture( './images/space24.jpg' ),
+				loadTexture( './images/space22.jpg' ),
+				loadTexture( './images/space21.jpg' ),
+				loadTexture( './images/space26.jpg' ),
+				loadTexture( './images/space23.jpg' ),
+				loadTexture( './images/space25.jpg' )
 			]
 
 		}else if(x == 3){
 
 			var materials = [
-				loadTexture( '../Kuan_MessageBoard/images/space34.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space32.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space31.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space36.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space33.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space35.jpg' )
+				loadTexture( './images/space34.jpg' ),
+				loadTexture( './images/space32.jpg' ),
+				loadTexture( './images/space31.jpg' ),
+				loadTexture( './images/space36.jpg' ),
+				loadTexture( './images/space33.jpg' ),
+				loadTexture( './images/space35.jpg' )
 			]
 
 		}else if(x == 4){
 
 			var materials = [
-				loadTexture( '../Kuan_MessageBoard/images/space44.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space42.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space41.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space46.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space43.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space45.jpg' )
+				loadTexture( './images/space44.jpg' ),
+				loadTexture( './images/space42.jpg' ),
+				loadTexture( './images/space41.jpg' ),
+				loadTexture( './images/space46.jpg' ),
+				loadTexture( './images/space43.jpg' ),
+				loadTexture( './images/space45.jpg' )
 			]
 
 		}else if(x == 5){
@@ -176,34 +175,34 @@ $(function(){
 			$('.text').css('text-shadow', '3px 4px 4px #000');
 
 			var materials = [
-				loadTexture( '../Kuan_MessageBoard/images/space54.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space52.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space51.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space56.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space53.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space55.jpg' )
+				loadTexture( './images/space54.jpg' ),
+				loadTexture( './images/space52.jpg' ),
+				loadTexture( './images/space51.jpg' ),
+				loadTexture( './images/space56.jpg' ),
+				loadTexture( './images/space53.jpg' ),
+				loadTexture( './images/space55.jpg' )
 			]
 
 		}else if(x == 6){
 
 			var materials = [
-				loadTexture( '../Kuan_MessageBoard/images/space64.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space62.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space61.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space66.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space63.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space65.jpg' )
+				loadTexture( './images/space64.jpg' ),
+				loadTexture( './images/space62.jpg' ),
+				loadTexture( './images/space61.jpg' ),
+				loadTexture( './images/space66.jpg' ),
+				loadTexture( './images/space63.jpg' ),
+				loadTexture( './images/space65.jpg' )
 			]
 			
 		}else if(x==7){
 
 			var materials = [
-				loadTexture( '../Kuan_MessageBoard/images/space74.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space72.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space71.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space76.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space73.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space75.jpg' )
+				loadTexture( './images/space74.jpg' ),
+				loadTexture( './images/space72.jpg' ),
+				loadTexture( './images/space71.jpg' ),
+				loadTexture( './images/space76.jpg' ),
+				loadTexture( './images/space73.jpg' ),
+				loadTexture( './images/space75.jpg' )
 			]
 
 		}else{
@@ -213,12 +212,12 @@ $(function(){
 			$('.btn:before').css('background-color','#4ec3bf');
 
 			var materials = [
-				loadTexture( '../Kuan_MessageBoard/images/space84.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space82.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space81.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space86.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space83.jpg' ),
-				loadTexture( '../Kuan_MessageBoard/images/space85.jpg' )
+				loadTexture( './images/space84.jpg' ),
+				loadTexture( './images/space82.jpg' ),
+				loadTexture( './images/space81.jpg' ),
+				loadTexture( './images/space86.jpg' ),
+				loadTexture( './images/space83.jpg' ),
+				loadTexture( './images/space85.jpg' )
 			]
 
 		};
