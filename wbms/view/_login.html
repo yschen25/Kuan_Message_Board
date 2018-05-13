@@ -1,0 +1,45 @@
+<dialog id="loginDialog" class="mdl-dialog">
+    <form name="loginForm" method="post" action="login.php">
+        <div class="mdl-dialog__content">
+            <p>LOGIN</p>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input id="username" name="username" class="mdl-textfield__input" type="text">
+                <label class="mdl-textfield__label" for="username">username</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input id="password" name="password" class="mdl-textfield__input" type="password">
+                <label class="mdl-textfield__label" for="password">password</label>
+            </div>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button id="loginButton" type="submit"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                LOGIN
+            </button>
+        </div>
+    </form>
+</dialog>
+<div id="loginSnackBar" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
+</div>
+<script>
+    (function () {
+        $('#loginDialog').get(0).showModal();
+        $('[name=loginForm]').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                method: 'POST',
+                data: $(this).serializeArray(),
+                success: function (data) {
+                    $('#loginSnackBar').get(0).MaterialSnackbar.showSnackbar({message: data.message});
+                    if (data.status) {
+                        setTimeout(function () {
+                            window.location.href = 'index.php';
+                        }, 1000);
+                    }
+                }
+            });
+        });
+    }());
+</script>
