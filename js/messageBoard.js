@@ -32,7 +32,7 @@ $(function(){
 
 		if(message.replace(/\s+/g,"").toLowerCase() == 'kuan==god'){
 	     	kuan();
-			$('#container').append('<audio src="../messageBoard/music/NyanCat.mp3"></audio>');
+			$('#container').append('<audio src="../Kuan_MessageBoard/music/NyanCat.mp3"></audio>');
 	     	$('audio')[0].play();
 			return;
 		}
@@ -63,25 +63,25 @@ $(function(){
 		setInterval(function(){
 				let top = Math.floor((Math.random() * 10) + 1);
 				let left = Math.floor((Math.random() * 200) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../messageBoard/images/kuan_nyan_cat.gif">');
+				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../Kuan_MessageBoard/images/kuan_nyan_cat.gif">');
 			}, 100)
 
 			setInterval(function(){
 				let top = Math.floor((Math.random() * 500) + 1);
 				let left = Math.floor((Math.random() * 1000) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../messageBoard/images/kuan_nyan_cat.gif">');
+				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../Kuan_MessageBoard/images/kuan_nyan_cat.gif">');
 			}, 200)
 
 			setInterval(function(){
 				let top = Math.floor((Math.random() * 1500) + 1);
 				let left = Math.floor((Math.random() * 8000) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../messageBoard/images/kuan_nyan_cat.gif">');
+				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../Kuan_MessageBoard/images/kuan_nyan_cat.gif">');
 			}, 300)
 
 			setInterval(function(){
 				let top = Math.floor((Math.random() * 2000) + 1);
 				let left = Math.floor((Math.random() * 500) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../messageBoard/images/kuan_nyan_cat.gif">');
+				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="../Kuan_MessageBoard/images/kuan_nyan_cat.gif">');
 			}, 500)
 
 	}
@@ -130,45 +130,45 @@ $(function(){
 			$('.text, .aurthor, .statement').addClass('universeTextStyle');
 
 			var materials = [
-				loadTexture( '../messageBoard/images/space14.jpg' ),
-				loadTexture( '../messageBoard/images/space12.jpg' ),
-				loadTexture( '../messageBoard/images/space11.jpg' ),
-				loadTexture( '../messageBoard/images/space16.jpg' ),
-				loadTexture( '../messageBoard/images/space13.jpg' ),
-				loadTexture( '../messageBoard/images/space15.jpg' )
+				loadTexture( '../Kuan_MessageBoard/images/space14.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space12.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space11.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space16.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space13.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space15.jpg' )
 			]
 
 		}else if(x == 2){
 
 			var materials = [
-				loadTexture( '../messageBoard/images/space24.jpg' ),
-				loadTexture( '../messageBoard/images/space22.jpg' ),
-				loadTexture( '../messageBoard/images/space21.jpg' ),
-				loadTexture( '../messageBoard/images/space26.jpg' ),
-				loadTexture( '../messageBoard/images/space23.jpg' ),
-				loadTexture( '../messageBoard/images/space25.jpg' )
+				loadTexture( '../Kuan_MessageBoard/images/space24.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space22.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space21.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space26.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space23.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space25.jpg' )
 			]
 
 		}else if(x == 3){
 
 			var materials = [
-				loadTexture( '../messageBoard/images/space34.jpg' ),
-				loadTexture( '../messageBoard/images/space32.jpg' ),
-				loadTexture( '../messageBoard/images/space31.jpg' ),
-				loadTexture( '../messageBoard/images/space36.jpg' ),
-				loadTexture( '../messageBoard/images/space33.jpg' ),
-				loadTexture( '../messageBoard/images/space35.jpg' )
+				loadTexture( '../Kuan_MessageBoard/images/space34.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space32.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space31.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space36.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space33.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space35.jpg' )
 			]
 
 		}else if(x == 4){
 
 			var materials = [
-				loadTexture( '../messageBoard/images/space44.jpg' ),
-				loadTexture( '../messageBoard/images/space42.jpg' ),
-				loadTexture( '../messageBoard/images/space41.jpg' ),
-				loadTexture( '../messageBoard/images/space46.jpg' ),
-				loadTexture( '../messageBoard/images/space43.jpg' ),
-				loadTexture( '../messageBoard/images/space45.jpg' )
+				loadTexture( '../Kuan_MessageBoard/images/space44.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space42.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space41.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space46.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space43.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space45.jpg' )
 			]
 
 		}else if(x == 5){
@@ -176,34 +176,34 @@ $(function(){
 			$('.text').css('text-shadow', '3px 4px 4px #000');
 
 			var materials = [
-				loadTexture( '../messageBoard/images/space54.jpg' ),
-				loadTexture( '../messageBoard/images/space52.jpg' ),
-				loadTexture( '../messageBoard/images/space51.jpg' ),
-				loadTexture( '../messageBoard/images/space56.jpg' ),
-				loadTexture( '../messageBoard/images/space53.jpg' ),
-				loadTexture( '../messageBoard/images/space55.jpg' )
+				loadTexture( '../Kuan_MessageBoard/images/space54.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space52.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space51.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space56.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space53.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space55.jpg' )
 			]
 
 		}else if(x == 6){
 
 			var materials = [
-				loadTexture( '../messageBoard/images/space64.jpg' ),
-				loadTexture( '../messageBoard/images/space62.jpg' ),
-				loadTexture( '../messageBoard/images/space61.jpg' ),
-				loadTexture( '../messageBoard/images/space66.jpg' ),
-				loadTexture( '../messageBoard/images/space63.jpg' ),
-				loadTexture( '../messageBoard/images/space65.jpg' )
+				loadTexture( '../Kuan_MessageBoard/images/space64.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space62.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space61.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space66.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space63.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space65.jpg' )
 			]
 			
 		}else if(x==7){
 
 			var materials = [
-				loadTexture( '../messageBoard/images/space74.jpg' ),
-				loadTexture( '../messageBoard/images/space72.jpg' ),
-				loadTexture( '../messageBoard/images/space71.jpg' ),
-				loadTexture( '../messageBoard/images/space76.jpg' ),
-				loadTexture( '../messageBoard/images/space73.jpg' ),
-				loadTexture( '../messageBoard/images/space75.jpg' )
+				loadTexture( '../Kuan_MessageBoard/images/space74.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space72.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space71.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space76.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space73.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space75.jpg' )
 			]
 
 		}else{
@@ -213,12 +213,12 @@ $(function(){
 			$('.btn:before').css('background-color','#4ec3bf');
 
 			var materials = [
-				loadTexture( '../messageBoard/images/space84.jpg' ),
-				loadTexture( '../messageBoard/images/space82.jpg' ),
-				loadTexture( '../messageBoard/images/space81.jpg' ),
-				loadTexture( '../messageBoard/images/space86.jpg' ),
-				loadTexture( '../messageBoard/images/space83.jpg' ),
-				loadTexture( '../messageBoard/images/space85.jpg' )
+				loadTexture( '../Kuan_MessageBoard/images/space84.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space82.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space81.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space86.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space83.jpg' ),
+				loadTexture( '../Kuan_MessageBoard/images/space85.jpg' )
 			]
 
 		};
