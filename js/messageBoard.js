@@ -32,7 +32,7 @@ $(function(){
 
 		if(message.replace(/\s+/g,"").toLowerCase() == 'kuan==god'){
 	     	kuan();
-			$('#container').append('<audio src="./music/NyanCat.mp3"></audio>');
+			$('#container').append('<audio loop src="./music/NyanCat.mp3"></audio>');
 	     	$('audio')[0].play();
 			return;
 		}
@@ -41,10 +41,10 @@ $(function(){
 			'type' : 'POST',
 			'url'  : 'wbms/sendMessage.php',
 			'data' : { 'message' : message },
-			beforeSend:function(){
+			beforeSend : function(){
 				console.log('loading');
 			},
-			sucess:function(data){
+			sucess : function(data){
 				console.log(data);
 				if(data.status){
 		            $('.alert').show();
@@ -59,30 +59,42 @@ $(function(){
 
 	function kuan(){
 		
-			setInterval(function(){
-				let top = Math.floor((Math.random() * 10) + 1);
-				let left = Math.floor((Math.random() * 200) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
-			}, 100)
+			let kuan01 = setInterval(function(){
+							let top = Math.floor((Math.random() * 100) + 1);
+							let left = Math.floor((Math.random() * 200) + 1);
+							$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
+						}, 100)
 
-			setInterval(function(){
-				let top = Math.floor((Math.random() * 500) + 1);
-				let left = Math.floor((Math.random() * 1000) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
-			}, 200)
+			let kuan02 = setInterval(function(){
+							let top = Math.floor((Math.random() * 500) + 1);
+							let left = Math.floor((Math.random() * 1000) + 1);
+							$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
+						}, 200)
 
-			setInterval(function(){
-				let top = Math.floor((Math.random() * 1500) + 1);
-				let left = Math.floor((Math.random() * 8000) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
-			}, 300)
+			let kuan03 = setInterval(function(){
+							let top = Math.floor((Math.random() * 1000) + 1);
+							let left = Math.floor((Math.random() * 8000) + 1);
+							$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
+						}, 300)
 
-			setInterval(function(){
-				let top = Math.floor((Math.random() * 2000) + 1);
-				let left = Math.floor((Math.random() * 500) + 1);
-				$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
-			}, 500)
+			let kuan04 = setInterval(function(){
+							let top = Math.floor((Math.random() * 1500) + 1);
+							let left = Math.floor((Math.random() * 500) + 1);
+							$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
+						}, 400)
 
+			stopKuan();
+			
+			function stopKuan(){
+
+				setInterval(function(){
+					clearInterval(kuan01);
+					clearInterval(kuan02);
+					clearInterval(kuan03);
+					clearInterval(kuan04);
+				}, 10000)
+
+			}
 	}
 	
 	// Console style
