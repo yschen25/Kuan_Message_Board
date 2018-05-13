@@ -1,0 +1,60 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Dashboard</span>
+        </div>
+    </header>
+    <div class="custom-layout__drawer mdl-layout__drawer">
+        <nav class="mdl-navigation mdl-layout-spacer">
+            <a class="mdl-navigation__link" href="index.php"><i class="material-icons" role="presentation">home</i>Dashboard</a>
+            <div class="mdl-layout-spacer"></div>
+            <a class="mdl-navigation__link" href="logout.php"><i class="material-icons"
+                                                                 role="presentation">exit_to_app</i>Logout</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <table class="mdl-data-table mdl-js-data-table" width="100%">
+            <thead>
+            <tr>
+                <th width="10%" class="mdl-data-table__cell--non-numeric">NAME</th>
+                <th width="80%" class="mdl-data-table__cell--non-numeric">MESSAGE</th>
+                <th width="10%" class="mdl-data-table__cell--non-numeric">TIME</th>
+            </tr>
+            </thead>
+            <tbody id="message_block">
+
+            </tbody>
+        </table>
+    </main>
+</div>
+<style>
+    .custom-layout__drawer.mdl-layout__drawer .mdl-navigation__link .material-icons {
+        margin: 0 32px 0 0;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            method: 'POST',
+            success: function (data) {
+                // console.log(data);
+                if (data.status) {
+                    let html = '';
+                    data.result.forEach(function (e) {
+                        console.log(e);
+                        console.log(e.username);
+                        html +=
+                            '<tr>' +
+                            '<th class="mdl-data-table__cell--non-numeric" class="mdl-data-table__cell--non-numeric">' + e.username + '</th>' +
+                            '<th class="mdl-data-table__cell--non-numeric">' + e.message + '</th>' +
+                            '<th class="mdl-data-table__cell--non-numeric">' + e.date + '</th>' +
+                            '</tr>';
+                    });
+                    $('#message_block').html(html);
+                } else {
+
+                }
+            }
+        });
+    });
+</script>
