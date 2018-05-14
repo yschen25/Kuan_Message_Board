@@ -44,14 +44,22 @@ $(function(){
 			beforeSend : function(){
 				console.log('loading');
 			},
-			sucess : function(data){
+			success : function(data){
 				console.log(data);
 				if(data.status){
 		            $('.alert').show();
-		            $('.alert p').text('sucess');
+		            $('.alert p').text('Kuan thanks you for your message');
+                    $('.close').on('click', function(){
+                        $('.alert').hide();
+                        window.location.reload();
+                    });
 				}else{
 					$('.alert').show();
-		            $('.alert p').text('Send message fail, plz contact aurthor');
+		            $('.alert p').text('Message sending failed, plz contact aurthor QAQ');
+                    $('.close').on('click', function(){
+                        $('.alert').hide();
+                        window.location.reload();
+                    });
 				}
 			}
 		})

@@ -224,6 +224,7 @@ textarea:focus{
 	margin-top: 100px;
 	font-size: 1.25rem;
 	font-weight: 600;
+	line-height: 2;
 }
 
 /*=======================Aurthor Style=====================*/
@@ -359,6 +360,12 @@ textarea:focus{
 		text-align: center;
 	}
 
+
+	.motto{
+		line-height: 2;
+
+	}
+
 	.motto2{
 		display: none;
 
@@ -373,7 +380,7 @@ textarea:focus{
 	}
 
 	.btn{
-		bottom: 95px;
+		bottom: 65px;
 	}
 	
 	.alert{
