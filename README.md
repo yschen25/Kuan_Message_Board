@@ -51,9 +51,9 @@
 
 * **2018.09.11**
 
-         * Add meta tags
-         * Fix the textarea field doesn't clear when reload the website in IE and Edge
-         * Fix it can't type in the textarea in firefox
+         * Adding meta tags
+         * Fixing the textarea field doesn't clear when reload the website in IE and Edge
+         * Fixing it can't type in the textarea in firefox
 <br/>
 
 
