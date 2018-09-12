@@ -1,22 +1,12 @@
 # Kuan_MessageBoard
 
-        * A messageboard for the company, 
-          who's the employee of this company can leave a message to boss
-          
-        * Random and 720° background makes you feel like you can leave a message wherever you are
+* **Front-end : [Me](https://github.com/yschen25)**
         
-        * There is a hot tip in the console 
-        
-
-## Aurthor
-
-* **Front-End : [Me](https://github.com/yschen25)**
-        
-        HTML、CSS、JavaScript、jQuery、Canvas、Photoshop
+      HTML、CSS、JavaScript、jQuery、Canvas、Photoshop
       
-* **Back-End : [Dino](https://github.com/dinoyee)**
+* **Back-end : [Dino](https://github.com/dinoyee)**
 
-        PHP、SQL
+      PHP、SQL
          
 ## Demo
 

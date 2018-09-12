@@ -142,7 +142,7 @@ textarea:focus{
 	position: absolute;
     right: 0;
     left: 0;
-    bottom: 50px;
+    top: 85vh;
     margin: auto;
     border-radius: 3px;
 }                  
@@ -182,7 +182,7 @@ textarea:focus{
 	min-height: 35vh;
 	max-height: 50vh;
 	padding: 0 20px;
-	background-color: #f7f7f7d6;
+	background-color: #f7f7f7;
 	position: fixed;
 	top: 320px;
 	display: none;
@@ -246,15 +246,19 @@ textarea:focus{
     margin: auto;
 }
 
+.ka a{
+	color: #fff;
+}
+
 .dino{
     bottom: 25px;
 }
 
 .statement{
 	position: absolute;
-	font-size: 1rem;
-	color: #fff;
-    bottom: 0px;
+    font-size: 1rem;
+    color: #fff;
+    top: 95vh;
 }
 
 .statement a:visited{
@@ -315,7 +319,7 @@ textarea:focus{
 		width: 120px;
 	    height: 40px;
 	    line-height: 40px;
-	    bottom: 120px;
+	    top: 74vh;
 	    font-size: 18px;
 	}
 
@@ -344,6 +348,8 @@ textarea:focus{
 	.statement {
 	    text-align: center;
 	    line-height: 1.3;
+	    font-size: 1.4rem;
+    	top: 86vh;
 	}
 
 }
@@ -380,7 +386,7 @@ textarea:focus{
 	}
 
 	.btn{
-		bottom: 65px;
+		top: 88vh;
 	}
 	
 	.alert{

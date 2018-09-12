@@ -19,11 +19,16 @@ $(function(){
 	$('.close').on('click', function(){
      	$('.alert').hide();
 	});
+
+	// Clear textarea text for IE and Edge
+	window.onbeforeunload = function() {
+		$('.message').val('');
+ 	}
 		
 	// Message function
 	function sendMeassage(){
 
-		let message = $('.message').val();
+		var message = $('.message').val();
 
 		if(message.replace(/\s+/g,"") == ""){
 			$('.alert').show();
@@ -67,27 +72,27 @@ $(function(){
 
 	function kuan(){
 		
-			let kuan01 = setInterval(function(){
-							let top = Math.floor((Math.random() * 100) + 1);
-							let left = Math.floor((Math.random() * 200) + 1);
+			var kuan01 = setInterval(function(){
+							var top = Math.floor((Math.random() * 100) + 1);
+							var left = Math.floor((Math.random() * 200) + 1);
 							$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
 						}, 100)
 
-			let kuan02 = setInterval(function(){
-							let top = Math.floor((Math.random() * 500) + 1);
-							let left = Math.floor((Math.random() * 1000) + 1);
+			var kuan02 = setInterval(function(){
+							var top = Math.floor((Math.random() * 500) + 1);
+							var left = Math.floor((Math.random() * 1000) + 1);
 							$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
 						}, 200)
 
-			let kuan03 = setInterval(function(){
-							let top = Math.floor((Math.random() * 1000) + 1);
-							let left = Math.floor((Math.random() * 8000) + 1);
+			var kuan03 = setInterval(function(){
+							var top = Math.floor((Math.random() * 1000) + 1);
+							var left = Math.floor((Math.random() * 8000) + 1);
 							$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
 						}, 300)
 
-			let kuan04 = setInterval(function(){
-							let top = Math.floor((Math.random() * 1500) + 1);
-							let left = Math.floor((Math.random() * 500) + 1);
+			var kuan04 = setInterval(function(){
+							var top = Math.floor((Math.random() * 1500) + 1);
+							var left = Math.floor((Math.random() * 500) + 1);
 							$('body').append('<img class="kuanImg" style="top:' + top + 'px;left:'+ left + 'px;" src="./images/kuan_nyan_cat.gif">');
 						}, 400)
 
@@ -106,12 +111,12 @@ $(function(){
 	}
 	
 	// Console style
-	let consoleStyle1 = "padding:5px 10px; margin: 10px; border-radius: 5px;background:linear-gradient(#02cccc,#016b6b); color:#fff; font-size:20px;";
-	let consoleStyle2 = "padding:5px 10px; margin: 10px; border-radius: 5px;background: linear-gradient(#fc812f, #c45003); color: #fff; font-size: 22px";
-	let consoleStyle3 = "color:#0d56c6; margin: 5px 0; font-size:22px; font-Weight:600";
-	let consoleStyle4 = "color:#ea2b04; font-size:24px; font-Weight:600";
-	let consoleStyle5 = "margin-top:190px;";
-	let consoleStyle6 = "margin-top:80px;";
+	var consoleStyle1 = "padding:5px 10px; margin: 10px; border-radius: 5px;background:linear-gradient(#02cccc,#016b6b); color:#fff; font-size:20px;";
+	var consoleStyle2 = "padding:5px 10px; margin: 10px; border-radius: 5px;background: linear-gradient(#fc812f, #c45003); color: #fff; font-size: 22px";
+	var consoleStyle3 = "color:#0d56c6; margin: 5px 0; font-size:22px; font-Weight:600";
+	var consoleStyle4 = "color:#ea2b04; font-size:24px; font-Weight:600";
+	var consoleStyle5 = "margin-top:190px;";
+	var consoleStyle6 = "margin-top:80px;";
 	console.log("%c You are sneaking, aren't you?", consoleStyle1);
 	console.log("%c", consoleStyle5);
 	console.log("%c Nothing here, ok? ", consoleStyle2);
@@ -119,7 +124,7 @@ $(function(){
 	console.log("%c Fine, just type %c Kuan==God %c in the message box 'n' send it", consoleStyle3, consoleStyle4, consoleStyle3);
 
 	// Draw background
-	let camera, scene, renderer,
+	var camera, scene, renderer,
 	texture_placeholder,
 	isUserInteracting = false,
 	onMouseDownMouseX = 0, onMouseDownMouseY = 0,
@@ -133,7 +138,7 @@ $(function(){
 
 	function init(){
 
-		let container, mesh;
+		var container, mesh;
 		container = $('#container')[0];
 		camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
 		scene = new THREE.Scene();
@@ -143,7 +148,7 @@ $(function(){
 		context.fillRect(0, 0, texture_placeholder.width, texture_placeholder.height);
 
 		// Random background images
-		let x = Math.floor((Math.random() * 10) + 1);
+		var x = Math.floor((Math.random() * 10) + 1);
 		if(x == 1){
 
 			$('.text, .aurthor, .statement').addClass('universeTextStyle');
@@ -246,8 +251,8 @@ $(function(){
 		mesh.scale.x = -1;
 		scene.add(mesh);
 
-		for(let i=0, l=mesh.geometry.vertices.length; i<l; i ++){
-			let vertex = mesh.geometry.vertices[i];
+		for(var i=0, l=mesh.geometry.vertices.length; i<l; i ++){
+			var vertex = mesh.geometry.vertices[i];
 			vertex.normalize();
 			vertex.multiplyScalar( 550 );
 		}
@@ -270,9 +275,9 @@ $(function(){
 	}
 
 	function loadTexture(path){
-		let texture = new THREE.Texture( texture_placeholder );
-		let material = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5 } );
-		let image = new Image();
+		var texture = new THREE.Texture( texture_placeholder );
+		var material = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5 } );
+		var image = new Image();
 
 		image.onload = function () {
 			texture.image = this;
