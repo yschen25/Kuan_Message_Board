@@ -3,6 +3,12 @@ html, body{
 	overflow: hidden;
 }
 
+#container{
+	width: 100vw;
+    height: 100vh;
+	outline: 1px solid red;
+}
+
 /*=======================Text Style=====================*/
 .text{
 	color: #fff;
@@ -99,8 +105,7 @@ html, body{
 .message{
 	display: block;
 	min-height: 40vh;
-	max-height: 50vh;
-    padding: 2vh 0 50vh 1vw;
+    padding: 2vh 0 40vh 1vw;
 	background-color: rgba(255, 255, 255, .1);
 	box-shadow: 0px 0px 46px 2px #fbfbfb;
 	color: #fff;
@@ -142,9 +147,10 @@ textarea:focus{
 	position: absolute;
     right: 0;
     left: 0;
-    top: 85vh;
+    top: 740px;
     margin: auto;
     border-radius: 3px;
+    z-index: 1;
 }                  
 
 .btn:before{
@@ -242,7 +248,7 @@ textarea:focus{
 	color: #fff;
 	position: absolute;
     right: 30px;
-    bottom: 55px;
+    top: 90vh;
     margin: auto;
 }
 
@@ -251,7 +257,7 @@ textarea:focus{
 }
 
 .dino{
-    bottom: 25px;
+    top: 95vh;
 }
 
 .statement{
@@ -280,7 +286,7 @@ textarea:focus{
 }
 
 /*=======================Media Setting=====================*/
-@media screen and (max-width:767px) {
+@media screen and (min-width:200px) and (max-width:400px) {
 
 	html{
 	    font-size: 65%;
@@ -319,7 +325,78 @@ textarea:focus{
 		width: 120px;
 	    height: 40px;
 	    line-height: 40px;
-	    top: 74vh;
+	    top: 450px;
+	    font-size: 1.8rem;
+	}
+
+	.alert{
+	    max-height: none;
+    	padding: 2vh 0 15vh;
+		top: 165px;
+		display: none;
+	}
+	
+	.aurthor{
+		width: auto;
+		top: 94vh;
+		font-size: 1.5rem;
+		text-align: left;
+	}
+	
+	.ka{
+		left: 20px;
+	}
+
+	.dino{
+		right: 20px;
+	}
+
+	.statement {
+	    display: none;
+	}
+
+}
+
+@media screen and (min-width:401px) and (max-width:767px) {
+
+	html{
+	    font-size: 65%;
+	 }
+
+	.text{
+		width: 90%;
+		white-space: normal;
+		text-align: center;
+	}
+
+	.title{
+		top: -30px;
+	}
+
+	.desc{
+		top: 60px;
+	}
+
+	.motto, .motto2{
+		display: none;
+	}
+
+	.title, .desc, .motto, .motto2{
+		animation: none;
+	}
+
+	.message {
+		min-height: 40vh;
+	    max-height: 50vh;
+	    padding: 1vh 0 25vh 2vw;
+		top: 165px;
+	}
+
+	.btn{
+		width: 120px;
+	    height: 40px;
+	    line-height: 40px;
+	    top: 520px;
 	    font-size: 18px;
 	}
 
@@ -332,7 +409,7 @@ textarea:focus{
 	
 	.aurthor{
 		width: auto;
-		bottom: 75px;
+		top: 85vh;
 		font-size: 1.5rem;
 		text-align: left;
 	}
@@ -386,7 +463,7 @@ textarea:focus{
 	}
 
 	.btn{
-		top: 88vh;
+		top: 820px;
 	}
 	
 	.alert{
@@ -396,7 +473,7 @@ textarea:focus{
 	
 	.aurthor{
 		width: auto;
-		bottom: 45px;
+		top: 900px;
 		font-size: 1.6rem;
 		text-align: left;
 	}
