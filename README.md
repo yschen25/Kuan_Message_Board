@@ -1,24 +1,35 @@
 # Kuan_Message_Board
 
-        * A mysterious message board for the company, 
-          who's the employee of this company can leave a message to boss.
-          
-        * 720° surround random background makes you feel like you can leave a message wherever you are
-        
-        * There is a hot tip in the console
+A message board for the company.
+<br/>
+
+## Description
+
+<p>A mysterious message board for the company, who's the employee of this company can leave a message to boss. 720° surround random background makes you feel like you can leave a message wherever you are. ...and there is a hot tip in the console :trollface:.</p>
 <br/>
 
 ## Aurthor
-* **Front-end : [Me](https://github.com/yschen25)**
+* **:octocat: Front-End : [Me](https://github.com/yschen25)**
         
       HTML、CSS、JavaScript、jQuery、Canvas、Photoshop
       
-* **Back-end : [Dino](https://github.com/dinoyee)**
+* **:octocat: Back-End : [Dino](https://github.com/dinoyee)**
 
       PHP、SQL
 <br/>
 
 ## Demo
+
+### **[FRONTSTAGE](https://kuan-message-board.000webhostapp.com/)**
+**Where You Can Leave The Message**
+
+### **[BACKSTAGE](https://kuan-message-board.000webhostapp.com/wbms/login.php)**
+**Where You Can View The Message Which You Or Someone Else Left**
+<br/>
+Username : guest / Password : 123456
+<br/>
+<br/>
+<br/>
 
 1. Auto rotate background or you can use mouse to controll it 
 <p align="center">
@@ -54,8 +65,20 @@
          * Adding meta tags
          * Fixing the textarea field doesn't clear when reload the website in IE and Edge
          * Fixing it can't type in the textarea in firefox
+         
+* **2018.09.20**
+
+         * Build website on free web hosting
+         * Build DB
+         * Modify the code to connect free web hosting DB
+         * Allow user to login whether type capital or lowercase letter at backstage
+         * Remove hosting logo
 <br/>
 
+## Web Hosting
+Using [000Webhost](https://www.000webhost.com/).
+<br/>
+<br/>
 
 ## Demo Editor tools
-Using [ScreenToGif](http://www.screentogif.com/) to record 'n' [ezGIF](https://ezgif.com/) to edit
+Using [ScreenToGif](http://www.screentogif.com/) to record and [ezGIF](https://ezgif.com/) to edit.
