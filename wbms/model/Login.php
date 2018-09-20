@@ -5,7 +5,7 @@ class Login extends App
 {
     public function onAjax()
     {
-        $username = $_POST['username'];
+        $username = strtolower($_POST['username']);
         $password = $_POST['password'];
         $DBUtil = new DBUtil();
         $isLogin = $DBUtil->checkLogin($username, $password);

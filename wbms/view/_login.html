@@ -24,7 +24,9 @@
     <button class="mdl-snackbar__action" type="button"></button>
 </div>
 <script>
-    (function () {
+    $(function () {
+
+        // Login
         $('#loginDialog').get(0).showModal();
         $('[name=loginForm]').submit(function (e) {
             e.preventDefault();
@@ -41,5 +43,9 @@
                 }
             });
         });
+
+        // Remove 000webhost logo
+        $('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]').parent().remove();
+
     }());
 </script>

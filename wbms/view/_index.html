@@ -33,16 +33,15 @@
     }
 </style>
 <script>
-    $(document).ready(function () {
+    $(function () {
+
+        // Get the data from DB
         $.ajax({
             method: 'POST',
             success: function (data) {
-                // console.log(data);
                 if (data.status) {
                     let html = '';
                     data.result.forEach(function (e) {
-                        console.log(e);
-                        console.log(e.username);
                         html +=
                             '<tr>' +
                             '<th class="mdl-data-table__cell--non-numeric" class="mdl-data-table__cell--non-numeric">' + e.username + '</th>' +
@@ -51,10 +50,12 @@
                             '</tr>';
                     });
                     $('#message_block').html(html);
-                } else {
-
                 }
             }
         });
+
+        // Remove 000webhost logo
+        $('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]').parent().remove();
+
     });
 </script>

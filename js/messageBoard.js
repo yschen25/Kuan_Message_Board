@@ -123,6 +123,9 @@ $(function(){
 	console.log("%c ", consoleStyle6);
 	console.log("%c Fine, just type %c Kuan==God %c in the message box 'n' send it", consoleStyle3, consoleStyle4, consoleStyle3);
 
+	// Remove 000webhost logo
+	$('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]').parent().remove();
+
 	// Draw background
 	var camera, scene, renderer,
 	texture_placeholder,

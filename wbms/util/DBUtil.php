@@ -3,18 +3,19 @@ require_once('OUtil.php');
 
 class DBUtil
 {
-    const _user = 'root';
+    const _user = 'id7162828_yschen25';
     const _password = '1234qwer';
 
     const _DB_type = 'mysql';
-    const _DB_host = '127.0.0.1';
-    const _DB_name = 'msg_board';
+    const _DB_host = 'localhost';
+    const _DB_name = 'id7162828_kuan_messageboard';
+    const _DB_port = '3306';
 
     public static $DB = null;
 
     public function __construct()
     {
-        $_DSN = self::_DB_type . ':host=' . self::_DB_host . ';dbname=' . self::_DB_name;
+        $_DSN = self::_DB_type . ':host=' . self::_DB_host . ';dbname=' . self::_DB_name . ';severPort=' . self::_DB_port;
         try {
             self::$DB = new PDO(
                 $_DSN, self::_user, self::_password,
@@ -56,7 +57,7 @@ class DBUtil
      */
     public function sendMessage($msg)
     {
-        $sql = "INSERT INTO `msg_board`.`message` (`msg`, `ip`, `time`) VALUES (:msg, :ip, :time)";
+        $sql = "INSERT INTO `id7162828_kuan_messageboard`.`message` (`msg`, `ip`, `time`) VALUES (:msg, :ip, :time)";
         $sql = self::$DB->prepare($sql);
         $sql->bindValue(':msg', $msg);
         $sql->bindValue(':ip', OUtil::getIP());
