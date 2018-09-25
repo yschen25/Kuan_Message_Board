@@ -11,7 +11,7 @@ A message board for the company.
 ## Aurthor
 * **:octocat: Front-End : [Me](https://github.com/yschen25)**
         
-      HTML、CSS、JavaScript、jQuery、Canvas、PHP、Photoshop
+      HTML、CSS、JavaScript、jQuery、Canvas、SQL、Photoshop
       
 * **:octocat: Back-End : [Dino](https://github.com/dinoyee)**
 
