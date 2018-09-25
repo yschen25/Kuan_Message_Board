@@ -11,7 +11,7 @@ A message board for the company.
 ## Aurthor
 * **:octocat: Front-End : [Me](https://github.com/yschen25)**
         
-      HTML、CSS、JavaScript、jQuery、Canvas、Photoshop
+      HTML、CSS、JavaScript、jQuery、Canvas、SQL、Photoshop
       
 * **:octocat: Back-End : [Dino](https://github.com/dinoyee)**
 
@@ -73,6 +73,12 @@ Username : guest / Password : 123456
          * Modify the code to connect free web hosting DB
          * Allow user to login whether type capital or lowercase letter at backstage
          * Remove hosting logo
+         
+* **2018.09.25**
+
+         * Fixing backstage messages duplicate display
+         * Sorting messages by date
+         * Optimizing SQL
 <br/>
 
 ## Web Hosting
