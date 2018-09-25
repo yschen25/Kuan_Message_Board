@@ -5,10 +5,10 @@ class Login extends App
 {
     public function onAjax()
     {
-        $username = strtolower($_POST['username']);
+        $managerName = strtolower($_POST['managerName']);
         $password = $_POST['password'];
         $DBUtil = new DBUtil();
-        $isLogin = $DBUtil->checkLogin($username, $password);
+        $isLogin = $DBUtil->checkLogin($managerName, $password);
         if ($isLogin === true) {
             $_SESSION['isLogin'] = true;
             OUtil::responseJson(

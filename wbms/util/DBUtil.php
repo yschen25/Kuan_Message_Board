@@ -34,15 +34,15 @@ class DBUtil
     /**
      * 確認登入狀態
      *
-     * @param $username
+     * @param $managerName
      * @param $password
      * @return bool
      */
-    public function checkLogin($username, $password)
+    public function checkLogin($managerName, $password)
     {
-        $sql = "SELECT * FROM `user` WHERE username = :username AND password = :password";
+        $sql = "SELECT * FROM `manager` WHERE managerName = :managerName AND password = :password";
         $sql = self::$DB->prepare($sql);
-        $sql->bindValue(':username', $username);
+        $sql->bindValue(':managerName', $managerName);
         $sql->bindValue(':password', $password);
         $sql->execute();
         $result = $sql->fetchAll();
@@ -73,7 +73,7 @@ class DBUtil
      */
     public function queryMessage()
     {
-        $sql = "SELECT IF(message.ip = ip.ip, ip.user, message.ip) AS username, message.msg as message, message.time as date FROM message JOIN ip";
+        $sql = "SELECT IF(m.ip = user.ip, user.userName, m.ip) username, m.msg message, m.time date FROM user RIGHT JOIN message m on user.ip = m.ip ORDER BY m.time DESC";
         $sql = self::$DB->prepare($sql);
         $sql->execute();
         $result = $sql->fetchAll();
