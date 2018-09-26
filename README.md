@@ -5,13 +5,13 @@ A message board for the company.
 
 ## Description
 
-<p>A mysterious message board for the company, who's the employee of this company can leave a message to boss. 720° surround random background makes you feel like you can leave a message wherever you are. ...and there is a hot tip in the console :trollface:.</p>
+<p>A mysterious message board for the company, who's the employee of this company can leave a message to boss. 720° surround random background makes you feel like you can leave a message wherever you are. Enable mouse wheel zoom on PC, enable pinch zoom or touch screen to rotate on mobile. ...and there is a hot tip in the console :trollface:.</p>
 <br/>
 
 ## Aurthor
 * **:octocat: Front-End : [Me](https://github.com/yschen25)**
         
-      HTML、CSS、JavaScript、jQuery、Canvas、SQL、Photoshop
+      HTML、CSS、JavaScript、jQuery、Canvas、SQL、Photoshop、illustrator
       
 * **:octocat: Back-End : [Dino](https://github.com/dinoyee)**
 
@@ -31,7 +31,7 @@ ManagerName : guest / Password : 123456
 <br/>
 <br/>
 
-1. Auto rotate background or you can use mouse to controll it 
+1. Auto rotate background or you can use mouse to controll, it also enable mouse wheel zoom on PC. Enable pinch zoom or touch screen to rotate on mobile 
 <p align="center">
    <img src="01.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
 </p>
@@ -79,6 +79,19 @@ ManagerName : guest / Password : 123456
          * Fixing backstage messages duplicate display
          * Sorting messages by date
          * Optimizing SQL
+
+* **2018.09.26**
+
+         * Improving the speed on mobile (Android)
+         * Enable mouse wheel zoom on PC / Enable pinch zoom on mobile
+         * Enable touch screen to rotate on mobile 
+         * Changing background images
+         * Adding meta tags
+<br/>
+
+## Cubemap textures
+From [Humus](http://www.humus.name/).
+<br/>
 <br/>
 
 ## Web Hosting

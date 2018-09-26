@@ -6,7 +6,6 @@ html, body{
 #container{
 	width: 100vw;
     height: 100vh;
-	outline: 1px solid red;
 }
 
 /*=======================Text Style=====================*/
@@ -23,6 +22,7 @@ html, body{
     left: 0;
     bottom: 0;
     margin: auto;
+    text-shadow: 3px 4px 4px #000;
 }
 
 .title{
@@ -336,23 +336,9 @@ textarea:focus{
 		display: none;
 	}
 	
-	.aurthor{
-		width: auto;
-		top: 94vh;
-		font-size: 1.5rem;
-		text-align: left;
-	}
-	
-	.ka{
-		left: 20px;
-	}
-
-	.dino{
-		right: 20px;
-	}
-
-	.statement {
-	    display: none;
+	.aurthor,
+	.statement{
+		display: none;
 	}
 
 }
@@ -407,26 +393,9 @@ textarea:focus{
 		display: none;
 	}
 	
-	.aurthor{
-		width: auto;
-		top: 85vh;
-		font-size: 1.5rem;
-		text-align: left;
-	}
-	
-	.ka{
-		left: 20px;
-	}
-
-	.dino{
-		right: 20px;
-	}
-
-	.statement {
-	    text-align: center;
-	    line-height: 1.3;
-	    font-size: 1.4rem;
-    	top: 86vh;
+	.aurthor,
+	.statement{
+		display: none;
 	}
 
 }
@@ -471,24 +440,9 @@ textarea:focus{
 		font-size: 1.6rem;
 	}
 	
-	.aurthor{
-		width: auto;
-		top: 900px;
-		font-size: 1.6rem;
-		text-align: left;
-	}
-	
-	.ka{
-		left: 20px;
-	}
-
-	.dino{
-		right: 20px;
-	}
-
-	.statement {
-	    text-align: center;
-	    line-height: 1.3;
+	.aurthor,
+	.statement{
+		display: none;
 	}
 
 }

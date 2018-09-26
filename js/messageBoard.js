@@ -127,10 +127,12 @@ $(function(){
 	$('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]').parent().remove();
 
 	// Draw background
-	var camera, scene, renderer,
-	texture_placeholder,
+	var camera, scene, renderer;
+	var texture_placeholder,
 	isUserInteracting = false,
 	onMouseDownMouseX = 0, onMouseDownMouseY = 0,
+	onPointerDownPointerX = 0, onPointerDownPointerY = 0,
+	onPointerDownLon = 0, onPointerDownLat = 0,
 	lon = 90, onMouseDownLon = 0,
 	lat = 0, onMouseDownLat = 0,
 	phi = 0, theta = 0,
@@ -142,146 +144,164 @@ $(function(){
 	function init(){
 
 		var container, mesh;
-		container = $('#container')[0];
-		camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
+		container = document.getElementById('container');
+		camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
 		scene = new THREE.Scene();
 
 		texture_placeholder = document.createElement('canvas');
+		texture_placeholder.width = 128;
+		texture_placeholder.height = 128;
+
 		var context = texture_placeholder.getContext('2d');
+		context.fillStyle = 'rgb(200, 200, 200)';
 		context.fillRect(0, 0, texture_placeholder.width, texture_placeholder.height);
 
 		// Random background images
 		var x = Math.floor((Math.random() * 10) + 1);
 		if(x == 1){
 
-			$('.text, .aurthor, .statement').addClass('universeTextStyle');
-
 			var materials = [
-				loadTexture( './images/space14.jpg' ),
-				loadTexture( './images/space12.jpg' ),
-				loadTexture( './images/space11.jpg' ),
-				loadTexture( './images/space16.jpg' ),
-				loadTexture( './images/space13.jpg' ),
-				loadTexture( './images/space15.jpg' )
+				loadTexture( './images/space014.jpg' ),
+				loadTexture( './images/space012.jpg' ),
+				loadTexture( './images/space011.jpg' ),
+				loadTexture( './images/space016.jpg' ),
+				loadTexture( './images/space013.jpg' ),
+				loadTexture( './images/space015.jpg' )
 			]
 
 		}else if(x == 2){
 
 			var materials = [
-				loadTexture( './images/space24.jpg' ),
-				loadTexture( './images/space22.jpg' ),
-				loadTexture( './images/space21.jpg' ),
-				loadTexture( './images/space26.jpg' ),
-				loadTexture( './images/space23.jpg' ),
-				loadTexture( './images/space25.jpg' )
+				loadTexture( './images/space024.jpg' ),
+				loadTexture( './images/space022.jpg' ),
+				loadTexture( './images/space021.jpg' ),
+				loadTexture( './images/space026.jpg' ),
+				loadTexture( './images/space023.jpg' ),
+				loadTexture( './images/space025.jpg' )
 			]
 
 		}else if(x == 3){
 
+			$('.text').css('text-shadow', '3px 4px 4px #4c4b4b');
+
 			var materials = [
-				loadTexture( './images/space34.jpg' ),
-				loadTexture( './images/space32.jpg' ),
-				loadTexture( './images/space31.jpg' ),
-				loadTexture( './images/space36.jpg' ),
-				loadTexture( './images/space33.jpg' ),
-				loadTexture( './images/space35.jpg' )
+				loadTexture( './images/space034.jpg' ),
+				loadTexture( './images/space032.jpg' ),
+				loadTexture( './images/space031.jpg' ),
+				loadTexture( './images/space036.jpg' ),
+				loadTexture( './images/space033.jpg' ),
+				loadTexture( './images/space035.jpg' )
 			]
 
 		}else if(x == 4){
 
 			var materials = [
-				loadTexture( './images/space44.jpg' ),
-				loadTexture( './images/space42.jpg' ),
-				loadTexture( './images/space41.jpg' ),
-				loadTexture( './images/space46.jpg' ),
-				loadTexture( './images/space43.jpg' ),
-				loadTexture( './images/space45.jpg' )
+				loadTexture( './images/space044.jpg' ),
+				loadTexture( './images/space042.jpg' ),
+				loadTexture( './images/space041.jpg' ),
+				loadTexture( './images/space046.jpg' ),
+				loadTexture( './images/space043.jpg' ),
+				loadTexture( './images/space045.jpg' )
 			]
 
 		}else if(x == 5){
 
-			$('.text').css('text-shadow', '3px 4px 4px #000');
-
 			var materials = [
-				loadTexture( './images/space54.jpg' ),
-				loadTexture( './images/space52.jpg' ),
-				loadTexture( './images/space51.jpg' ),
-				loadTexture( './images/space56.jpg' ),
-				loadTexture( './images/space53.jpg' ),
-				loadTexture( './images/space55.jpg' )
+				loadTexture( './images/space054.jpg' ),
+				loadTexture( './images/space052.jpg' ),
+				loadTexture( './images/space051.jpg' ),
+				loadTexture( './images/space056.jpg' ),
+				loadTexture( './images/space053.jpg' ),
+				loadTexture( './images/space055.jpg' )
 			]
 
 		}else if(x == 6){
 
 			var materials = [
-				loadTexture( './images/space64.jpg' ),
-				loadTexture( './images/space62.jpg' ),
-				loadTexture( './images/space61.jpg' ),
-				loadTexture( './images/space66.jpg' ),
-				loadTexture( './images/space63.jpg' ),
-				loadTexture( './images/space65.jpg' )
+				loadTexture( './images/space064.jpg' ),
+				loadTexture( './images/space062.jpg' ),
+				loadTexture( './images/space061.jpg' ),
+				loadTexture( './images/space066.jpg' ),
+				loadTexture( './images/space063.jpg' ),
+				loadTexture( './images/space065.jpg' )
 			]
 			
-		}else if(x==7){
+		}else if(x == 7){
+
+			$('.text').css('text-shadow', '3px 4px 4px #616161');
 
 			var materials = [
-				loadTexture( './images/space74.jpg' ),
-				loadTexture( './images/space72.jpg' ),
-				loadTexture( './images/space71.jpg' ),
-				loadTexture( './images/space76.jpg' ),
-				loadTexture( './images/space73.jpg' ),
-				loadTexture( './images/space75.jpg' )
+				loadTexture( './images/space074.jpg' ),
+				loadTexture( './images/space072.jpg' ),
+				loadTexture( './images/space071.jpg' ),
+				loadTexture( './images/space076.jpg' ),
+				loadTexture( './images/space073.jpg' ),
+				loadTexture( './images/space075.jpg' )
+			]
+
+		}else if(x == 8){
+
+			$('.text').css({'color' : '#231717',
+				            'text-shadow' : 'none'});
+
+			var materials = [
+				loadTexture( './images/space084.jpg' ),
+				loadTexture( './images/space082.jpg' ),
+				loadTexture( './images/space081.jpg' ),
+				loadTexture( './images/space086.jpg' ),
+				loadTexture( './images/space083.jpg' ),
+				loadTexture( './images/space085.jpg' )
 			]
 
 		}else{
 
-			$('.text').css('text-shadow', '4px 5px 4px #000');
-			$('.btn').css('background-color','#33a1ad');
-			$('.btn:before').css('background-color','#4ec3bf');
-
 			var materials = [
-				loadTexture( './images/space84.jpg' ),
-				loadTexture( './images/space82.jpg' ),
-				loadTexture( './images/space81.jpg' ),
-				loadTexture( './images/space86.jpg' ),
-				loadTexture( './images/space83.jpg' ),
-				loadTexture( './images/space85.jpg' )
+				loadTexture( './images/space094.jpg' ),
+				loadTexture( './images/space092.jpg' ),
+				loadTexture( './images/space091.jpg' ),
+				loadTexture( './images/space096.jpg' ),
+				loadTexture( './images/space093.jpg' ),
+				loadTexture( './images/space095.jpg' )
 			]
 
 		};
 
-		mesh = new THREE.Mesh( new THREE.BoxGeometry(300, 300, 300, 7, 7, 7), new THREE.MultiMaterial( materials ) );
-		mesh.scale.x = -1;
-		scene.add(mesh);
+		var geometry = new THREE.BoxBufferGeometry(300, 300, 300, 7, 7, 7);
+		geometry.scale(-1, 1, 1);
 
-		for(var i=0, l=mesh.geometry.vertices.length; i<l; i ++){
-			var vertex = mesh.geometry.vertices[i];
-			vertex.normalize();
-			vertex.multiplyScalar( 550 );
-		}
+		mesh = new THREE.Mesh(geometry, materials);
+		scene.add(mesh);
 
 		renderer = new THREE.CanvasRenderer();
 		renderer.setPixelRatio(window.devicePixelRatio);
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		container.appendChild(renderer.domElement);
 
-		$(document).on('mousedown', function(e){ onDocumentMouseDown(e);})
-		$(document).on('mousemove', function(e){ onDocumentMouseMove(e);})
-		$(document).on('mouseup', function(e){ onDocumentMouseUp(e);})
-		$(window).on('resize', function(){onWindowResize()})
+		document.addEventListener('mousedown', onDocumentMouseDown, false);
+		document.addEventListener('mousemove', onDocumentMouseMove, false);
+		document.addEventListener('mouseup', onDocumentMouseUp, false);
+		document.addEventListener('wheel', onDocumentMouseWheel, false);
+
+		document.addEventListener('touchstart', onDocumentTouchStart, false);
+		document.addEventListener('touchmove', onDocumentTouchMove, false);
+
+		window.addEventListener('resize', onWindowResize, false);
 	}
 
-	function onWindowResize(){
+	function onWindowResize() {
+
 		camera.aspect = window.innerWidth / window.innerHeight;
 		camera.updateProjectionMatrix();
 		renderer.setSize(window.innerWidth, window.innerHeight);
+
 	}
 
-	function loadTexture(path){
-		var texture = new THREE.Texture( texture_placeholder );
-		var material = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5 } );
-		var image = new Image();
+	function loadTexture(path) {
 
+		var texture = new THREE.Texture(texture_placeholder);
+		var material = new THREE.MeshBasicMaterial({map: texture, overdraw: 0.5});
+
+		var image = new Image();
 		image.onload = function () {
 			texture.image = this;
 			texture.needsUpdate = true;
@@ -291,72 +311,91 @@ $(function(){
 		return material;
 	}
 
-	function onDocumentMouseDown(e){
-		e.preventDefault();
+	function onDocumentMouseDown(event) {
 
+		event.preventDefault();
 		isUserInteracting = true;
 
-		onPointerDownPointerX = e.clientX;
-		onPointerDownPointerY = e.clientY;
+		onPointerDownPointerX = event.clientX;
+		onPointerDownPointerY = event.clientY;
 
 		onPointerDownLon = lon;
 		onPointerDownLat = lat;
+
 	}
 
-	function onDocumentMouseMove(e){
-		if(isUserInteracting === true){
-			lon = (onPointerDownPointerX - e.clientX) * 0.1 + onPointerDownLon;
-			lat = (e.clientY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
+	function onDocumentMouseMove(event) {
+
+		if (isUserInteracting === true) {
+			lon = (onPointerDownPointerX - event.clientX) * 0.1 + onPointerDownLon;
+			lat = (event.clientY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
 		}
+
 	}
 
-	function onDocumentMouseUp(e){
+	function onDocumentMouseUp(event) {
+
 		isUserInteracting = false;
+
 	}
 
-	function onDocumentTouchStart(e){
-		if(e.touches.length == 1){
+	function onDocumentMouseWheel(event) {
 
-			e.preventDefault();
+		var fov = camera.fov + event.deltaY * 0.05;
+		camera.fov = THREE.Math.clamp(fov, 10, 75);
+		camera.updateProjectionMatrix();
 
-			onPointerDownPointerX = e.touches[0].pageX;
-			onPointerDownPointerY = e.touches[0].pageY;
+	}
+
+
+	function onDocumentTouchStart(event) {
+
+		if (event.touches.length == 1) {
+			event.preventDefault();
+
+			onPointerDownPointerX = event.touches[0].pageX;
+			onPointerDownPointerY = event.touches[0].pageY;
 
 			onPointerDownLon = lon;
 			onPointerDownLat = lat;
 		}
+
 	}
 
-	function onDocumentTouchMove(e){
-		if(e.touches.length == 1){
+	function onDocumentTouchMove(event) {
 
-			e.preventDefault();
+		if (event.touches.length == 1) {
+			event.preventDefault();
 
-			lon = (onPointerDownPointerX - e.touches[0].pageX) * 0.1 + onPointerDownLon;
-			lat = (e.touches[0].pageY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
+			lon = (onPointerDownPointerX - event.touches[0].pageX) * 0.1 + onPointerDownLon;
+			lat = (event.touches[0].pageY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
 		}
+
 	}
 
-	function animate(){
+	function animate() {
+
 		requestAnimationFrame(animate);
 		update();
+
 	}
 
-	function update(){
+	function update() {
+
 		if (isUserInteracting === false) lon += 0.1;
 
-		lat = Math.max(- 85, Math.min( 85, lat));
-		phi = THREE.Math.degToRad( 90 - lat);
+		lat = Math.max(-85, Math.min(85, lat));
+		phi = THREE.Math.degToRad(90 - lat);
 		theta = THREE.Math.degToRad(lon);
 
 		target.x = 500 * Math.sin(phi) * Math.cos(theta);
 		target.y = 500 * Math.cos(phi);
 		target.z = 500 * Math.sin(phi) * Math.sin(theta);
 
-		camera.position.copy(target).negate();
 		camera.lookAt(target);
 
 		renderer.render(scene, camera);
+
 	}
 
 });
