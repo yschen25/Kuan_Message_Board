@@ -44,9 +44,9 @@
                     data.result.forEach(function (e) {
                         html +=
                             '<tr>' +
-                            '<th class="mdl-data-table__cell--non-numeric" class="mdl-data-table__cell--non-numeric">' + e.username + '</th>' +
-                            '<th class="mdl-data-table__cell--non-numeric">' + e.message + '</th>' +
-                            '<th class="mdl-data-table__cell--non-numeric">' + e.date + '</th>' +
+                            '<td class="mdl-data-table__cell--non-numeric">' + e.username + '</td>' +
+                            '<td class="mdl-data-table__cell--non-numeric">' + e.message + '</td>' +
+                            '<td class="mdl-data-table__cell--non-numeric">' + e.date + '</td>' +
                             '</tr>';
                     });
                     $('#message_block').html(html);
