@@ -22,11 +22,16 @@ A message board for the company.
 
 ### **[FRONTSTAGE](https://kuan-message-board.000webhostapp.com/)**
 **Where You Can Leave The Message**
+<br/>
+<img src="images/front_qr.png" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="20%">
+<br/>
 
 ### **[BACKSTAGE](https://kuan-message-board.000webhostapp.com/wbms/login.php)**
 **Where You Can View The Message Which You Or Someone Else Left**
 <br/>
 ManagerName : guest / Password : 123456
+<br/>
+<img src="images/back_qr.png" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="20%">
 <br/>
 <br/>
 <br/>
@@ -87,6 +92,11 @@ ManagerName : guest / Password : 123456
          * Enable touch screen to rotate on mobile 
          * Changing background images
          * Adding meta tags
+         
+* **2018.09.27**
+
+         * Slowing down the rotate speed
+         * Add QR code
 <br/>
 
 ## Cubemap textures
