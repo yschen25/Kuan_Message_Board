@@ -73,11 +73,11 @@ ManagerName : guest / Password : 123456
          
 * **2018.09.20**
 
-         * Build website on free web hosting
-         * Build DB
-         * Modify the code to connect free web hosting DB
+         * Building website on free web hosting
+         * Building DB
+         * Modifying the code to connect free web hosting DB
          * Allow user to login whether type capital or lowercase letter at backstage
-         * Remove hosting logo
+         * Removing hosting logo
          
 * **2018.09.25**
 
@@ -96,7 +96,7 @@ ManagerName : guest / Password : 123456
 * **2018.09.27**
 
          * Slowing down the rotate speed
-         * Add QR code
+         * Adding QR code
 <br/>
 
 ## Cubemap textures
