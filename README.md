@@ -97,6 +97,10 @@ ManagerName : guest / Password : 123456
 
          * Slowing down the rotate speed
          * Adding QR code
+
+* **2018.10.02**
+
+         * Fix backstage RWD
 <br/>
 
 ## Cubemap textures
