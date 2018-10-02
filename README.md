@@ -100,7 +100,7 @@ ManagerName : guest / Password : 123456
 
 * **2018.10.02**
 
-         * Fix backstage RWD
+         * Fixing backstage RWD
 <br/>
 
 ## Cubemap textures
