@@ -26,6 +26,7 @@ A message board for the company.
 ### **[MESSAGE BOARD BACKSTAGE](https://kuan-message-board.000webhostapp.com/wbms/login.php) -> Where You Can View The Message**
 ManagerName : guest / Password : 123456
 <br/>
+<br/>
 <img src="images/back_qr.png" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="20%">
 <br/>
 <br/>
