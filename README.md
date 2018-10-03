@@ -34,28 +34,28 @@ ManagerName : guest / Password : 123456
 
 1. Auto rotate background or you can use mouse to controll, it also enable mouse wheel zoom on PC. Enable pinch zoom or touch screen to rotate on mobile 
 <p align="center">
-   <img src="01.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
+   <img src="images/01.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
 </p>
 <br/>
 
 
 2. Seeing Random background everytime when you reload the website
 <p align="center">
-   <img src="02.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
+   <img src="images/02.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
 </p>
 <br/>
 
 
 3. If you open the DevTools then you will find out a little tip, just type and send it 
 <p align="center">
-   <img src="03.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
+   <img src="images/03.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
 </p>
 <br/>
 
 
 3-1. Another version
 <p align="center">
-   <img src="04.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
+   <img src="images/04.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
 </p>
 <br/>
 
