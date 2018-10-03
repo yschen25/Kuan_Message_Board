@@ -109,5 +109,10 @@ Using [000Webhost](https://www.000webhost.com/).
 <br/>
 <br/>
 
+## QR Code Generator
+Using [IOI QR Code Generator](https://qr.ioi.tw/zh/).
+<br/>
+<br/>
+
 ## Demo Editor Tools
 Using [ScreenToGif](http://www.screentogif.com/) to record and [ezGIF](https://ezgif.com/) to edit.
