@@ -8,7 +8,7 @@ A message board for the company.
 <p>A mysterious message board for the company, who's the employee of this company can leave a message to boss. 720° surround random background makes you feel like you can leave a message wherever you are. Enable mouse wheel zoom on PC, enable pinch zoom or touch screen to rotate on mobile. ...and there is a hot tip in the console :trollface:.</p>
 <br/>
 
-## Aurthors
+## Authors
 * **:octocat: Front-End : [Me](https://github.com/yschen25)**
         
       HTML、CSS、JavaScript、jQuery、Canvas、SQL、Photoshop、illustrator
