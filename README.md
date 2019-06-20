@@ -5,7 +5,7 @@ A message board for the company.
 
 ## Description
 
-<p>A mysterious message board for the company, who's the employee of this company can leave a message to boss. 720° surround random background makes you feel like you can leave a message wherever you are. Enable mouse wheel zoom on PC, enable pinch zoom or touch screen to rotate on mobile. ...and there is a hot tip in the console :trollface:.</p>
+<p>A mysterious message board for the company, who's the employee of this company can leave a message to boss. 720° surround random background makes you feel like you can leave a message wherever you are. Enable mouse wheel zoom on PC and pinch zoom or touch screen to rotate on mobile. ...there is a hot tip in the console :trollface:.</p>
 <br/>
 
 ## Authors
@@ -32,14 +32,14 @@ ManagerName : guest / Password : 123456
 <br/>
 <br/>
 
-1. Auto rotate background or you can use mouse to controll, it also enable mouse wheel zoom on PC. Enable pinch zoom or touch screen to rotate on mobile 
+1. It has auto-rotate background but you also can use mouse to controll it, it also enable mouse wheel zoom on PC and pinch zoom or touch screen to rotate on mobile 
 <p align="center">
    <img src="images/01.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
 </p>
 <br/>
 
 
-2. Seeing Random background everytime when you reload the website
+2. Random background everytime when you reload the website
 <p align="center">
    <img src="images/02.gif" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="85%">
 </p>
@@ -77,7 +77,7 @@ ManagerName : guest / Password : 123456
          
 * **2018.09.25**
 
-         * Fixing backstage messages duplicate display
+         * Fixing backstage messages display duplicate
          * Sorting messages by date
          * Optimizing SQL
 
