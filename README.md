@@ -20,10 +20,10 @@ A message board for the company.
 
 ## Demo
 
-### **[MESSAGE BOARD FRONTSTAGE](https://kuan-message-board.000webhostapp.com/) -> Where You Can Leave The Message**
+### **[MESSAGE BOARD FRONTSTAGE](http://www.yschen25.com/portfolio/messageBoard/) -> Where You Can Leave The Message**
 <img src="images/front_qr.png" alt="Kuan_MessageBoard" title="Kuan_MessageBoard" width="20%">
 
-### **[MESSAGE BOARD BACKSTAGE](https://kuan-message-board.000webhostapp.com/wbms/login.php) -> Where You Can View The Message**
+### **[MESSAGE BOARD BACKSTAGE](http://www.yschen25.com/portfolio/messageBoard/wbms/login.php) -> Where You Can View The Message**
 ManagerName : guest / Password : 123456
 <br/>
 <br/>
