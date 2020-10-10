@@ -449,16 +449,18 @@ textarea:focus {
         white-space: normal;
         text-align: center;
         top: -35px;
+        font-size: 2rem;
     }
 
     .desc {
 		top:40px;
+        font-size: 1.4rem;
     }
 
     .motto {
         line-height: 2;
         top: 25px;
-
+        font-size: 1.2rem;
     }
 
     .motto2 {
@@ -471,11 +473,11 @@ textarea:focus {
     }
 
     .message {
-        top: 220px;
+        top: 195px;
     }
 
     .btn {
-        top: 580px;
+        top: 500px;
     }
 
     .alert {
