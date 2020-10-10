@@ -1,22 +1,22 @@
-html, body{
-	font-family: "Courier",'Noto Sans TC';
-	overflow: hidden;
+html, body {
+    font-family: "Courier", 'Noto Sans TC';
+    overflow: hidden;
 }
 
-#container{
-	width: 100vw;
+#container {
+    width: 100vw;
     height: 100vh;
 }
 
 /*=======================Text Style=====================*/
-.text{
-	color: #fff;
-	font-weight: 400;
-	margin: auto;
-	padding-top: 54px;
-	white-space: nowrap;
-	overflow: hidden;
-	position: absolute;
+.text {
+    color: #fff;
+    font-weight: 400;
+    margin: auto;
+    padding-top: 54px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
@@ -25,424 +25,467 @@ html, body{
     text-shadow: 3px 4px 4px #000;
 }
 
-.title{
-	font-size: 2.5rem;
-	width: 19em;
-	animation: typeTitle 2s steps(30, end); 
-	-webkit-animation: typeTitle 2s steps(30, end);
-	-o-animation: typeTitle 2s steps(30, end);
-	-moz-animation: typeTitle 2s steps(30, end);
-	-ms-animation: typeTitle 2s steps(30, end);
+.title {
+    font-size: 2.5rem;
+    width: 19em;
+    animation: typeTitle 2s steps(30, end);
+    -webkit-animation: typeTitle 2s steps(30, end);
+    -o-animation: typeTitle 2s steps(30, end);
+    -moz-animation: typeTitle 2s steps(30, end);
+    -ms-animation: typeTitle 2s steps(30, end);
 }
 
-@keyframes typeTitle{ 
-   from {width: 0;   } 
-   to   {width: 19em;}
-} 
-
-.desc{
-	font-size: 1.8rem;
-	padding-top: 30px;
-	width: 28em;
-	top: 82px;
-	animation: typeDesc 4s steps(30, end);
-	-webkit-animation: typeDesc 4s steps(30, end);
-	-o-animation: typeDesc 4s steps(30, end);
-	-moz-animation: typeDesc 4s steps(30, end);
-	-ms-animation: typeDesc 4s steps(30, end);
+@keyframes typeTitle {
+    from {
+        width: 0;
+    }
+    to {
+        width: 19em;
+    }
 }
 
-@keyframes typeDesc{ 
-   0%   {width: 0;   } 
-   50%  {width: 0;   } 
-   100% {width: 28em;}
-} 
-
-.motto{
-	font-size: 1.4rem;
-	padding-top: 80px;
-	width: 80em;
-	top: 90px;
-	animation: typeMotto 4s steps(200, end) forwards;
-	-webkit-animation: typeMotto 4s steps(200, end) forwards;
-	-o-animation: typeMotto 4s steps(200, end) forwards;
-	-moz-animation: typeMotto 4s steps(200, end) forwards;
-	-ms-animation: typeMotto 4s steps(200, end) forwards;
+.desc {
+    font-size: 1.8rem;
+    padding-top: 30px;
+    width: 28em;
+    top: 82px;
+    animation: typeDesc 4s steps(30, end);
+    -webkit-animation: typeDesc 4s steps(30, end);
+    -o-animation: typeDesc 4s steps(30, end);
+    -moz-animation: typeDesc 4s steps(30, end);
+    -ms-animation: typeDesc 4s steps(30, end);
 }
 
-@keyframes typeMotto{ 
-   0%   {width: 0;   } 
-   50%  {width: 0;   } 
-   60%  {width: 0;   } 
-   70%  {width: 0;   } 
-   80%  {width: 0;   } 
-   90%  {width: 80em;}
-   100% {width: 0em; }
-} 
-
-.motto2{
-	font-size: 1.4rem;
-	padding-top: 80px;
-	width: 51em;
-	top: 90px;
-	animation: typeMotto2 4.5s steps(100, end);
-	-webkit-animation: typeMotto2 4.5s steps(100, end);
-	-o-animation: typeMotto2 4.5s steps(100, end);
-	-moz-animation: typeMotto2 4.5s steps(100, end);
-	-ms-animation: typeMotto2 4.5s steps(100, end);
+@keyframes typeDesc {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 28em;
+    }
 }
 
-@keyframes typeMotto2{ 
-   0%   {width: 0;   } 
-   50%  {width: 0;   } 
-   60%  {width: 0;   } 
-   70%  {width: 0;   } 
-   80%  {width: 0;   } 
-   90%  {width: 0;   } 
-   100% {width: 51em;}
-} 
+.motto {
+    font-size: 1.4rem;
+    padding-top: 80px;
+    width: 80em;
+    top: 90px;
+    animation: typeMotto 4s steps(200, end) forwards;
+    -webkit-animation: typeMotto 4s steps(200, end) forwards;
+    -o-animation: typeMotto 4s steps(200, end) forwards;
+    -moz-animation: typeMotto 4s steps(200, end) forwards;
+    -ms-animation: typeMotto 4s steps(200, end) forwards;
+}
 
-.message{
-	display: block;
-	min-height: 40vh;
+@keyframes typeMotto {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    60% {
+        width: 0;
+    }
+    70% {
+        width: 0;
+    }
+    80% {
+        width: 0;
+    }
+    90% {
+        width: 80em;
+    }
+    100% {
+        width: 0em;
+    }
+}
+
+.motto2 {
+    font-size: 1.4rem;
+    padding-top: 80px;
+    width: 51em;
+    top: 90px;
+    animation: typeMotto2 4.5s steps(100, end);
+    -webkit-animation: typeMotto2 4.5s steps(100, end);
+    -o-animation: typeMotto2 4.5s steps(100, end);
+    -moz-animation: typeMotto2 4.5s steps(100, end);
+    -ms-animation: typeMotto2 4.5s steps(100, end);
+}
+
+@keyframes typeMotto2 {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    60% {
+        width: 0;
+    }
+    70% {
+        width: 0;
+    }
+    80% {
+        width: 0;
+    }
+    90% {
+        width: 0;
+    }
+    100% {
+        width: 51em;
+    }
+}
+
+.message {
+    display: block;
+    min-height: 40vh;
     padding: 2vh 0 40vh 1vw;
-	background-color: rgba(255, 255, 255, .1);
-	box-shadow: 0px 0px 46px 2px #fbfbfb;
-	color: #fff;
-	font-size: 20px;
-	font-weight: 400;
-	border: none;
-	overflow: hidden;
-	resize: none;
-	position: absolute;
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: 0px 0px 46px 2px #fbfbfb;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    overflow: hidden;
+    resize: none;
+    position: absolute;
     top: 250px;
     right: 0;
     left: 0;
     margin: auto;
 }
 
-textarea:focus{
-	outline: none;
+textarea:focus {
+    outline: none;
 }
 
 /*=======================Button Style=====================*/
-.btn{
-	display: block;
-	position: relative;
-	margin: auto;
-	margin-top: 30px;
-	background: #e24a4a;
-	font-size: 24px;
-	text-align: center;
-	text-decoration: none;
-	cursor: pointer;
-	font-weight: 600;
-	color: #fff;
-	width: 150px;
-	height: 50px;
-	line-height: 50px;
-	overflow: hidden;
-	-webkit-transition: all 0.15s ease-in;
-	transition: all 0.15s ease-in;
-	position: absolute;
+.btn {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    background: #e24a4a;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    position: absolute;
     right: 0;
     left: 0;
     top: 740px;
     margin: auto;
     border-radius: 3px;
     z-index: 1;
-}                  
-
-.btn:before{
-	content: "";
-	position: absolute;
-	background-color: rgba(255, 255, 255, .3);
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	top: 0;
-	left: -100px;
-	transform: skewX(-25deg);
-	-webkit-transform: skewX(-25deg);
-	-o-transform: skewX(-25deg);
-	-moz-transform: skewX(-25deg);
-	-ms-transform: skewX(-25deg);
-	transition: all 0.25s ease-out;
-	-webkit-transition: all 0.25s ease-out;
-	-o-transition: all 0.25s ease-out;
-	-moz-transition: all 0.25s ease-out;
-	-ms-transition: all 0.25s ease-out;
-}                  
-                
-.btn:hover{
-	background: #fd9b46;
 }
 
-.btn:hover:before{
-	width: 50px;
-	left: 210px;
-}  
+.btn:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: -100px;
+    transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+    -o-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+}
+
+.btn:hover {
+    background: #fd9b46;
+}
+
+.btn:hover:before {
+    width: 50px;
+    left: 210px;
+}
 
 /*=======================Alert Style=====================*/
-.alert{
-	min-height: 35vh;
-	max-height: 50vh;
-	padding: 0 20px;
-	background-color: #f7f7f7;
-	position: fixed;
-	top: 320px;
-	display: none;
+.alert {
+    min-height: 35vh;
+    max-height: 50vh;
+    padding: 0 20px;
+    background-color: #f7f7f7;
+    position: fixed;
+    top: 320px;
+    display: none;
 }
 
-.alert .close{
-	position: absolute;
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	top: 3px;
-	right: 2px;
-	cursor: pointer;
+.alert .close {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 3px;
+    right: 2px;
+    cursor: pointer;
 }
 
-.alert .close:after{
-	font-family: FontAwesome;
+.alert .close:after {
+    font-family: FontAwesome;
     content: "\f05c";
     display: inline-block;
     font-size: 2rem;
     transition: all 300ms 0s ease-in-out;
     -webkit-transition: all 300ms 0s ease-in-out;
     -o-transform: all 300ms 0s ease-in-out;
-	-moz-transform: all 300ms 0s ease-in-out;
-	-ms-transform: all 300ms 0s ease-in-out;
+    -moz-transform: all 300ms 0s ease-in-out;
+    -ms-transform: all 300ms 0s ease-in-out;
 }
 
-.alert .close:hover:after{
-	color: #f33609;
+.alert .close:hover:after {
+    color: #f33609;
     transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
-	-o-transform: rotate(360deg);
-	-moz-transform: rotate(360deg);
-	-ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
 }
 
-.alert .alertText{
-	text-align: center;
-	margin-top: 100px;
-	font-size: 1.25rem;
-	font-weight: 600;
-	line-height: 2;
+.alert .alertText {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2;
 }
 
 /*=======================Aurthor Style=====================*/
-#aurthor{
-	position: absolute;
+#aurthor {
+    position: absolute;
     right: 15px;
     bottom: 20px;
     margin: auto;
-	color: lime;
+    color: lime;
 }
 
-.aurthor{
-	width: 200px;
-	font-size: 20px;
-	color: #fff;
-	position: absolute;
+.aurthor {
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
     right: 30px;
     top: 90vh;
     margin: auto;
 }
 
-.ka a{
-	color: #fff;
+.ka a {
+    color: #fff;
 }
 
-.dino{
+.dino {
     top: 95vh;
 }
 
-.statement{
-	position: absolute;
+.statement {
+    position: absolute;
     font-size: 1rem;
     color: #fff;
     top: 95vh;
 }
 
-.statement a:visited{
-	color: #fff;
+.statement a:visited {
+    color: #fff;
 }
 
-.visited{
-	color: lime !important;
+.visited {
+    color: lime !important;
 }
 
 /*=======================Other Style=====================*/
-.kuanImg{
-	width: auto;
-	position: fixed;
+.kuanImg {
+    width: auto;
+    position: fixed;
 }
 
-.universeTextStyle{
-	color: lime;
+.universeTextStyle {
+    color: lime;
 }
 
 /*=======================Media Setting=====================*/
-@media screen and (min-width:200px) and (max-width:400px) {
+@media screen and (min-width: 200px) and (max-width: 400px) {
 
-	html{
-	    font-size: 65%;
-	 }
+    html {
+        font-size: 65%;
+    }
 
-	.text{
-		width: 90%;
-		white-space: normal;
-		text-align: center;
-	}
+    .text {
+        width: 90%;
+        white-space: normal;
+        text-align: center;
+    }
 
-	.title{
-		top: -30px;
-	}
+    .title {
+        top: -30px;
+    }
 
-	.desc{
-		top: 60px;
-	}
+    .desc {
+        top: 60px;
+    }
 
-	.motto, .motto2{
-		display: none;
-	}
+    .motto, .motto2 {
+        display: none;
+    }
 
-	.title, .desc, .motto, .motto2{
-		animation: none;
-	}
+    .title, .desc, .motto, .motto2 {
+        animation: none;
+    }
 
-	.message {
-		min-height: 40vh;
-	    max-height: 50vh;
-	    padding: 1vh 0 25vh 2vw;
-		top: 165px;
-	}
+    .message {
+        min-height: 40vh;
+        max-height: 50vh;
+        padding: 1vh 0 25vh 2vw;
+        top: 165px;
+    }
 
-	.btn{
-		width: 120px;
-	    height: 40px;
-	    line-height: 40px;
-	    top: 450px;
-	    font-size: 1.8rem;
-	}
+    .btn {
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        top: 450px;
+        font-size: 1.8rem;
+    }
 
-	.alert{
-	    max-height: none;
-    	padding: 2vh 0 15vh;
-		top: 165px;
-		display: none;
-	}
-	
-	.aurthor,
-	.statement{
-		display: none;
-	}
+    .alert {
+        max-height: none;
+        padding: 2vh 0 15vh;
+        top: 165px;
+        display: none;
+    }
 
-}
-
-@media screen and (min-width:401px) and (max-width:767px) {
-
-	html{
-	    font-size: 65%;
-	 }
-
-	.text{
-		width: 90%;
-		white-space: normal;
-		text-align: center;
-	}
-
-	.title{
-		top: -30px;
-	}
-
-	.desc{
-		top: 60px;
-	}
-
-	.motto, .motto2{
-		display: none;
-	}
-
-	.title, .desc, .motto, .motto2{
-		animation: none;
-	}
-
-	.message {
-		min-height: 40vh;
-	    max-height: 50vh;
-	    padding: 1vh 0 25vh 2vw;
-		top: 165px;
-	}
-
-	.btn{
-		width: 120px;
-	    height: 40px;
-	    line-height: 40px;
-	    top: 520px;
-	    font-size: 18px;
-	}
-
-	.alert{
-	    max-height: 20vh;
-		padding: 2vh 0 20vh;
-		top: 165px;
-		display: none;
-	}
-	
-	.aurthor,
-	.statement{
-		display: none;
-	}
+    .aurthor,
+    .statement {
+        display: none;
+    }
 
 }
 
-@media screen and (min-width:768px) and (max-width:1200px){
+@media screen and (min-width: 401px) and (max-width: 767px) {
 
-	html{
-	    font-size: 90%;
-	 }
+    html {
+        font-size: 65%;
+    }
 
-	.text{
-		width: 90%;
-		white-space: normal;
-		text-align: center;
-	}
+    .text {
+        width: 90%;
+        white-space: normal;
+        text-align: center;
+    }
 
+    .title {
+        top: -30px;
+    }
 
-	.motto{
-		line-height: 2;
+    .desc {
+        top: 60px;
+    }
 
-	}
+    .motto, .motto2 {
+        display: none;
+    }
 
-	.motto2{
-		display: none;
+    .title, .desc, .motto, .motto2 {
+        animation: none;
+    }
 
-	}
+    .message {
+        min-height: 40vh;
+        max-height: 50vh;
+        padding: 1vh 0 25vh 2vw;
+        top: 165px;
+    }
 
-	.title, .desc, .motto, .motto2{
-		animation: none;
-	}
+    .btn {
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        top: 520px;
+        font-size: 18px;
+    }
 
-	.message{
-		top: 300px;
-	}
+    .alert {
+        max-height: 20vh;
+        padding: 2vh 0 20vh;
+        top: 165px;
+        display: none;
+    }
 
-	.btn{
-		top: 820px;
-	}
-	
-	.alert{
-	    top: 370px;
-		font-size: 1.6rem;
-	}
-	
-	.aurthor,
-	.statement{
-		display: none;
-	}
+    .aurthor,
+    .statement {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+
+    html {
+        font-size: 90%;
+    }
+
+    .text {
+        width: 90%;
+        white-space: normal;
+        text-align: center;
+        top: -35px;
+    }
+
+    .desc {
+		top:40px;
+    }
+
+    .motto {
+        line-height: 2;
+        top: 25px;
+
+    }
+
+    .motto2 {
+        display: none;
+
+    }
+
+    .title, .desc, .motto, .motto2 {
+        animation: none;
+    }
+
+    .message {
+        top: 220px;
+    }
+
+    .btn {
+        top: 580px;
+    }
+
+    .alert {
+        top: 370px;
+        font-size: 1.6rem;
+    }
+
+    .aurthor,
+    .statement {
+        display: none;
+    }
 
 }
